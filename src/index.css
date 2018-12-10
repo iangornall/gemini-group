@@ -1,3 +1,10 @@
+:root {
+  --primary-color: #2e3f8b;
+  --secondary-color: #000000;
+  --white: #FFFFFF;
+  --large: 2em;
+}
+
 body {
   margin: 0;
   padding: 0;

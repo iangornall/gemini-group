@@ -1,0 +1,13 @@
+.contact-bar {
+  background: var(--primary-color);
+  text-align: right;
+  padding: 0.5em;
+}
+
+.link {
+  color: var(--white);
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 3em;
+  font-weight: bold;
+}
