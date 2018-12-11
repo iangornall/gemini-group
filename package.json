@@ -2,20 +2,21 @@
   "name": "gemini-group",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://iangornall.github.io/gemini-group/build",
+  "homepage": "http://iangornall.github.io/gemini-group",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
