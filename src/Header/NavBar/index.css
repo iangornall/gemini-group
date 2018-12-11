@@ -6,6 +6,7 @@
   padding: 1em;
   transform: scale(1);
   transition: all 200ms;
+  z-index: 1;
 }
 .small-nav-bar {
   height: 4em;

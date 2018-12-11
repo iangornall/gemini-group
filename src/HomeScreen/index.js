@@ -3,7 +3,7 @@ import Splash from './Splash';
 import Register from './Register';
 import Info from './Info';
 let HomeScreen = ({scrollY}) => (
-  <div>
+  <div style={{position: "relative"}}>
     <Splash scrollY={scrollY} />
     <Register />
     <Info 

@@ -1,4 +1,5 @@
 import React from 'react';
+import './Info.css';
 let Info = ({title, subtitle, text, video, reverse}) => (
   <div className={`info ${reverse && "reverse"}`} >
     <div className="info-text-container">
