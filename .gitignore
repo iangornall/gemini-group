@@ -8,8 +8,7 @@
 # testing
 /coverage
 
-# production
-/build
+# production - hosting on github
 
 # misc
 .DS_Store
