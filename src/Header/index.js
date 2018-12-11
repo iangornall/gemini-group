@@ -1,11 +1,11 @@
 import React from 'react';
 import ContactBar from './ContactBar';
 import NavBar from './NavBar';
-let Header = () => (
-  <div>
-    Header
+import './index.css';
+let Header = ({scrollY}) => (
+  <header className="header">
     <ContactBar />
-    <NavBar />
-  </div>
+    <NavBar scrollY={scrollY} />
+  </header>
 )
 export default Header;

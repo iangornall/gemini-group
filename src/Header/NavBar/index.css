@@ -1,7 +1,15 @@
 .nav-bar {
+  align-items: center;
   display: flex;
   justify-content: space-around;
+  height: 6em;
   padding: 1em;
+  transform: scale(1);
+  transition: all 200ms;
+}
+.small-nav-bar {
+  height: 4em;
+  transform: scale(0.75);
 }
 .nav-link {
   color: var(--secondary-color);
@@ -9,5 +17,5 @@
   text-decoration: none;
 }
 .nav-link:hover, .nav-link-active {
-  font-weight: bold;
+  color: var(--primary-color);
 }
