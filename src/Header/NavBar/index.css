@@ -1,5 +1,7 @@
 .nav-bar {
   align-items: center;
+  background: var(--secondary-color);
+  color: white;
   display: flex;
   justify-content: space-around;
   height: 6em;
@@ -12,11 +14,14 @@
   height: 4em;
   transform: scale(0.75);
 }
+.nav-image {
+  height: 100%;
+}
 .nav-link {
-  color: var(--secondary-color);
+  color: var(--white);
   font-size: var(--large);
   text-decoration: none;
 }
 .nav-link:hover, .nav-link-active {
-  color: var(--primary-color);
+  border-bottom: 0.1em solid var(--white);
 }
