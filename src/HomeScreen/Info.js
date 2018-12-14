@@ -1,7 +1,7 @@
 import React from 'react';
 import './Info.css';
 import "video-react/dist/video-react.css";
-import { Player } from 'video-react';
+import { Player, BigPlayButton } from 'video-react';
 let Info = ({title, subtitle, text, video, reverse}) => (
   <div className={`info ${reverse && "reverse"}`} >
     <div className="info-text-container">
@@ -11,6 +11,7 @@ let Info = ({title, subtitle, text, video, reverse}) => (
     </div>
     {video && <div className="info-video-container">
       <Player playsInline>
+        <BigPlayButton position="center" />
         <source src={video} type="video/mp4" />
       </Player>
     </div>}
