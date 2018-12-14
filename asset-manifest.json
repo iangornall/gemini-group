@@ -1,14 +1,16 @@
 {
-  "main.css": "/gemini-group/static/css/main.274a94fc.chunk.css",
-  "main.js": "/gemini-group/static/js/main.8ef17f82.chunk.js",
-  "main.js.map": "/gemini-group/static/js/main.8ef17f82.chunk.js.map",
-  "static/js/1.7dae29e8.chunk.js": "/gemini-group/static/js/1.7dae29e8.chunk.js",
-  "static/js/1.7dae29e8.chunk.js.map": "/gemini-group/static/js/1.7dae29e8.chunk.js.map",
+  "main.css": "/gemini-group/static/css/main.145b54ea.chunk.css",
+  "main.js": "/gemini-group/static/js/main.9fe173ea.chunk.js",
+  "main.js.map": "/gemini-group/static/js/main.9fe173ea.chunk.js.map",
+  "static/css/1.dbe64839.chunk.css": "/gemini-group/static/css/1.dbe64839.chunk.css",
+  "static/js/1.7605b9e3.chunk.js": "/gemini-group/static/js/1.7605b9e3.chunk.js",
+  "static/js/1.7605b9e3.chunk.js.map": "/gemini-group/static/js/1.7605b9e3.chunk.js.map",
   "runtime~main.js": "/gemini-group/static/js/runtime~main.36412c2a.js",
   "runtime~main.js.map": "/gemini-group/static/js/runtime~main.36412c2a.js.map",
+  "static/css/main.145b54ea.chunk.css.map": "/gemini-group/static/css/main.145b54ea.chunk.css.map",
   "static/media/Splash.css": "/gemini-group/static/media/banner1.c02fcb0b.jpg",
-  "static/css/main.274a94fc.chunk.css.map": "/gemini-group/static/css/main.274a94fc.chunk.css.map",
+  "static/css/1.dbe64839.chunk.css.map": "/gemini-group/static/css/1.dbe64839.chunk.css.map",
   "index.html": "/gemini-group/index.html",
-  "precache-manifest.83c8cb74a1134155ade9c87d65444a4c.js": "/gemini-group/precache-manifest.83c8cb74a1134155ade9c87d65444a4c.js",
+  "precache-manifest.2d519590a50b00435320037700a4f18e.js": "/gemini-group/precache-manifest.2d519590a50b00435320037700a4f18e.js",
   "service-worker.js": "/gemini-group/service-worker.js"
 }
