@@ -10,13 +10,15 @@
   flex-basis: 300px;
   padding: 0 2em 2em;
 }
+.info-text {
+  line-height: 1.75em;
+}
 .info-video-container{
   background: #000;
   flex-basis: 400px;
   flex-shrink: 0;
-  height: 300px;
   margin: 0 3em;
 }
-.info-video {
-  width: 400px;
+.reverse {
+  flex-direction: row-reverse;
 }

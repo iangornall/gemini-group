@@ -1,16 +1,19 @@
 import React from 'react';
 import './Info.css';
+import "video-react/dist/video-react.css";
+import { Player } from 'video-react';
 let Info = ({title, subtitle, text, video, reverse}) => (
   <div className={`info ${reverse && "reverse"}`} >
     <div className="info-text-container">
-      <h2 className="info-title">{title}</h2>
-      <h3 className="info-subtitle">{subtitle}</h3>
-      <p>{text}</p>
+      {title && <h2 className="info-title">{title}</h2>}
+      {subtitle && <h3 className="info-subtitle">{subtitle}</h3>}
+      {text && <p className="info-text">{text}</p>}
     </div>
-      <video className="info-video" controls>
-        <source src="./assets/how-rent-to-own-works.mp4" type="video/mp4" />
-      </video>
-
+    {video && <div className="info-video-container">
+      <Player playsInline>
+        <source src={video} type="video/mp4" />
+      </Player>
+    </div>}
   </div>
 );
 export default Info;

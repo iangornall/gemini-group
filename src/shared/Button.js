@@ -1,7 +1,7 @@
 import React from 'react';
 import './Button.css';
-let Button = ({children, text}) => (
-  <a className="button">
+let Button = ({children, text, color}) => (
+  <a className="button" style={{background: color}}>
       {text}
       {children}
   </a>
