@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-around;
   height: 6em;
-  padding: 1em;
+  padding: 0.5em;
   transform: scale(1);
   transition: all 200ms;
   z-index: 1;

@@ -7,9 +7,9 @@ let Info = ({title, subtitle, text, video, reverse}) => (
       <h3 className="info-subtitle">{subtitle}</h3>
       <p>{text}</p>
     </div>
-    <div className="info-video-container">
-      <video src={video} />
-    </div>
+      <video className="info-video" controls>
+        <source src="./assets/how-rent-to-own-works.mp4" type="video/mp4" />
+      </video>
 
   </div>
 );

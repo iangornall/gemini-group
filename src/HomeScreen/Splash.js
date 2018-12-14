@@ -1,9 +1,11 @@
 import React from 'react';
+import { withResizeDetector } from 'react-resize-detector';
 import './Splash.css';
-export default class Splash extends React.Component{
+class Splash extends React.Component{
   constructor(props){
     super(props);
     this.container = React.createRef();
+    this.updateContainer = this.updateContainer.bind(this);
     this.state = {
       width: 0,
       x: 0,
@@ -12,6 +14,14 @@ export default class Splash extends React.Component{
   }
   componentDidMount() {
     console.dir(this.container.current);
+    this.updateContainer();
+  }
+  componentDidUpdate(prevProps) {
+    if(this.props.width != prevProps.width){
+      this.updateContainer();
+    }
+  }
+  updateContainer() {
     this.setState({
       width: this.container.current.offsetWidth,
       x: this.container.current.getBoundingClientRect().left,
@@ -36,3 +46,4 @@ export default class Splash extends React.Component{
     )
   }
 }
+export default withResizeDetector(Splash, {handleWidth: true, resizableElementId: 'root'});
