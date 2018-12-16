@@ -8,23 +8,23 @@ self.__precacheManifest = [
     "url": "/gemini-group/static/js/runtime~main.36412c2a.js"
   },
   {
-    "revision": "9fe173ea78e73803de8f",
-    "url": "/gemini-group/static/js/main.9fe173ea.chunk.js"
+    "revision": "c8ea35e0f8b315a2f112",
+    "url": "/gemini-group/static/js/main.c8ea35e0.chunk.js"
   },
   {
-    "revision": "7605b9e30de01e56f0b7",
-    "url": "/gemini-group/static/js/1.7605b9e3.chunk.js"
+    "revision": "f64ec8a9e7aa908b38ca",
+    "url": "/gemini-group/static/js/1.f64ec8a9.chunk.js"
   },
   {
-    "revision": "9fe173ea78e73803de8f",
-    "url": "/gemini-group/static/css/main.145b54ea.chunk.css"
+    "revision": "c8ea35e0f8b315a2f112",
+    "url": "/gemini-group/static/css/main.72fcefe3.chunk.css"
   },
   {
-    "revision": "7605b9e30de01e56f0b7",
+    "revision": "f64ec8a9e7aa908b38ca",
     "url": "/gemini-group/static/css/1.dbe64839.chunk.css"
   },
   {
-    "revision": "72ea0b3e4031a0e103a0ae6ce3564960",
+    "revision": "e3bc2cb4f00d1262017e12ef10f5045a",
     "url": "/gemini-group/index.html"
   }
 ];
