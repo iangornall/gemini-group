@@ -3,8 +3,13 @@
   color: var(--white);
   cursor: pointer;
   display: inline-block;
-  font-size: 1.5em;
-  margin: 0 0.25em;
+  text-transform: uppercase;
+  margin: 0 0.25em 0.25em;
   padding: 0.5em 1em;
   text-decoration: none;
+  cursor: pointer;
+  transition: opacity 300ms;
+}
+.button:hover {
+  opacity: 0.8;
 }

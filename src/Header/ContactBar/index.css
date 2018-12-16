@@ -5,9 +5,14 @@
 }
 
 .link {
-  color: var(--white);
+  color: var(--lt-gray);
   display: inline-block;
   text-decoration: none;
   margin-right: 3em;
   font-weight: bold;
+  transition: color 300ms;
+}
+
+.link:hover {
+  color: var(--white);
 }

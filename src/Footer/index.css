@@ -1,0 +1,45 @@
+.footer {
+  padding: 2em;
+  background: var(--black);
+  color: var(--lt-gray);
+  flex-wrap: wrap;
+}
+.footer>div {
+  flex-basis: 50%;
+}
+
+.footer-columns {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-menu-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.footer-link {
+  display: block;
+  color: var(--white);
+  text-decoration: none;
+  margin: 0.5em 0;
+  transition: color 300ms;
+}
+
+.footer-link:hover {
+  color: #f8eda1;
+}
+
+.footer-label {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+.footer-input {
+  margin-left: 1em;
+}
+.footer-bottom {
+  font-size: 0.75em;
+}

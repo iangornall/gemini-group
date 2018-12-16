@@ -18,10 +18,17 @@
   height: 100%;
 }
 .nav-link {
-  color: var(--white);
-  font-size: var(--large);
+  color: var(--lt-gray);
+  font-size: var(--medium);
   text-decoration: none;
+  transition: color 300ms;
+  padding: 1em;
 }
 .nav-link:hover, .nav-link-active {
-  border-bottom: 0.1em solid var(--white);
+  color: #f8eda1;
+}
+@media (min-width: 768px) {
+  .nav-link {
+    font-size: var(--large);
+  }
 }

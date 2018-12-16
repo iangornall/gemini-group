@@ -10,7 +10,7 @@ let Info = ({title, subtitle, text, video, reverse}) => (
       {text && <p className="info-text">{text}</p>}
     </div>
     {video && <div className="info-video-container">
-      <Player playsInline>
+      <Player playsInline poster="assets/how-rent-to-own-works.png">
         <BigPlayButton position="center" />
         <source src={video} type="video/mp4" />
       </Player>

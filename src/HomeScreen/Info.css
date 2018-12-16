@@ -8,7 +8,7 @@
 .info-text-container {
   flex-grow: 1;
   flex-basis: 300px;
-  padding: 0 2em 2em;
+  padding: 0 2em 1em;
 }
 .info-text {
   line-height: 1.75em;
@@ -17,8 +17,14 @@
   background: #000;
   flex-basis: 400px;
   flex-shrink: 0;
-  margin: 0 3em;
+  margin: 0 3em 2em;
 }
 .reverse {
   flex-direction: row-reverse;
+}
+
+@media (min-width: 768px) {
+  .info-video-container{
+    margin: 2em 3em;
+  }
 }

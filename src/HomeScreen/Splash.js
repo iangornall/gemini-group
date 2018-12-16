@@ -1,5 +1,6 @@
 import React from 'react';
 import { withResizeDetector } from 'react-resize-detector';
+import Button from '../shared/Button';
 import './Splash.css';
 class Splash extends React.Component{
   constructor(props){
@@ -13,7 +14,6 @@ class Splash extends React.Component{
     }
   }
   componentDidMount() {
-    console.dir(this.container.current);
     this.updateContainer();
   }
   componentDidUpdate(prevProps) {
@@ -22,10 +22,11 @@ class Splash extends React.Component{
     }
   }
   updateContainer() {
+    let containerRect = this.container.current.getBoundingClientRect();
     this.setState({
-      width: this.container.current.offsetWidth,
-      x: this.container.current.getBoundingClientRect().left,
-      y: this.container.current.getBoundingClientRect().top
+      width: containerRect.width,
+      x: containerRect.left,
+      y: containerRect.top
     });
   }
   render(){
@@ -35,12 +36,13 @@ class Splash extends React.Component{
         backgroundPosition: `${this.state.x}px ${this.state.y - (this.props.scrollY ? 32 : 0)}px`
       }}>
         <div className="splash-content" style={{opacity: 1 - this.props.scrollY / 200}}>
-          <div className="splash-title">Rent to Own</div>
+          <div className="splash-title" style={{marginTop: this.state.width / 3}}>Rent to Own</div>
           <div><span className="splash-subtitle">Do these awesome things</span></div>
           <div>
-            <a className="splash-button">Do Stuff</a>
-            <a className="splash-button">Do Stuff</a>        
+            <Button>Do Stuff</Button>
+            <Button>Do Stuff</Button>        
           </div>
+          <hr class="separator" />
         </div>
       </div>
     )

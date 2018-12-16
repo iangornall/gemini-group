@@ -2,8 +2,12 @@
   --primary-color: #006FB2;
   --secondary-color: #0D0D0D;
   --large: 2em;
+  --medium: 1.25em;
   /* primary colors */
   --black: #000000; 
+  --lt-gray: #DDDDDD;
+  --md-gray: #676767;
+  --dk-gray: #444444;
   --cod-gray: #0D0D0D;
   /* secondary colors -  */
   --lt-mine-shaft: #333333;
@@ -25,9 +29,7 @@ body {
   background: #f0f0f0;
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Rajdhani', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
