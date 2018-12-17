@@ -1,0 +1,10 @@
+.card {
+  padding: 1em;
+}
+.card-video-container {
+  width: 100%;
+  margin-bottom: 1em;
+}
+.card-text-container {
+  line-height: 1.75;
+}

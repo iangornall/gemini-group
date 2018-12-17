@@ -16,7 +16,7 @@ class Splash extends React.Component{
   componentDidMount() {
     this.updateContainer();
   }
-  componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps, prevState) {
     if(this.props.width != prevProps.width){
       this.updateContainer();
     }

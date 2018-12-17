@@ -1,7 +1,7 @@
 import React from 'react';
 import Splash from '../shared/Splash';
 import Info from '../shared/Info';
-import ContactForm from './ContactForm';
+import ContactForm from '../shared/ContactForm';
 import './index.css';
 let SellScreen = ({scrollY}) => (
   <div class="sell">

@@ -4,6 +4,8 @@ import { HashRouter as Router, Route } from "react-router-dom";
 import Header from './Header';
 import HomeScreen from './HomeScreen';
 import SellScreen from './SellScreen';
+import BuyScreen from './BuyScreen';
+import ContactScreen from './ContactScreen';
 import Footer from './Footer';
 
 export default class App extends React.Component {
@@ -33,8 +35,10 @@ export default class App extends React.Component {
             />
             <Route path="/sell-a-home" render={(routeProps) => (
               <SellScreen {...routeProps} scrollY={this.state.scrollY} />)} />
-            {/* <Route path="/buy-a-home" component={BuyScreen} />
-            <Route path="/contact" component={Contact} /> */}
+            <Route path="/buy-a-home" render={(routeProps) => (
+              <BuyScreen {...routeProps} scrollY={this.state.scrollY} />)} />
+            <Route path="/contact" render={(routeProps) => (
+              <ContactScreen {...routeProps} scrollY={this.state.scrollY} />)} />
             <Footer />
           </div>
         </Router>

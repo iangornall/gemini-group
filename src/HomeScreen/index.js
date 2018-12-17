@@ -2,7 +2,7 @@ import React from 'react';
 import Splash from '../shared/Splash';
 import Register from './Register';
 import Info from '../shared/Info';
-import Hero from './Hero';
+import Hero from '../shared/Hero';
 import './index.css';
 let HomeScreen = ({scrollY}) => (
   <div style={{position: "relative"}}>
@@ -19,7 +19,8 @@ let HomeScreen = ({scrollY}) => (
       title="What is Rent to Own?" 
       subtitle="You pay rent and over time you will own your home!" 
       text="We are here to make your dreams come true.  We have a portfolio of wonderful homes to offer you.  To smooth the transition from renting to home ownership, we are willing to set a monthly rental fee for you and after a few short years, you will own your very own home."
-      video="./assets/how-rent-to-own-works.mp4"
+      video="assets/how-rent-to-own-works.mp4"
+      poster="assets/how-rent-to-own-works.png"
       reverse={false}
     />
     <Hero 
@@ -33,7 +34,8 @@ let HomeScreen = ({scrollY}) => (
     <Info 
       title="What is Rent to Own?"
       text="We are here to make your dreams come true.  We have a portfolio of wonderful homes to offer you.  To smooth the transition from renting to home ownership, we are willing to set a monthly rental fee for you and after a few short years, you will own your very own home."
-      video="./assets/how-rent-to-own-works.mp4"
+      video="assets/how-rent-to-own-works.mp4"
+      poster="assets/how-rent-to-own-works.png"
       reverse={true}
     />
     <Hero 
