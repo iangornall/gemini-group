@@ -1,0 +1,17 @@
+.sell-image {
+  width: 100%;
+}
+.sell-top {
+  margin-top: 2em;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.sell-top>div:first-child {
+  flex-basis: 400px;
+  flex-grow: 1;
+}
+.sell-top>div:last-child {
+  flex-basis: 300px;
+  flex-grow: 1;
+}

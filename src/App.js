@@ -3,6 +3,7 @@ import './App.css';
 import { HashRouter as Router, Route } from "react-router-dom";
 import Header from './Header';
 import HomeScreen from './HomeScreen';
+import SellScreen from './SellScreen';
 import Footer from './Footer';
 
 export default class App extends React.Component {
@@ -30,17 +31,13 @@ export default class App extends React.Component {
             <Route exact path="/" render={(routeProps) => (
               <HomeScreen {...routeProps} scrollY={this.state.scrollY} />)} 
             />
-            {/* <Route path="/sell-a-home" component={SellScreen} />
-            <Route path="/buy-a-home" component={BuyScreen} />
+            <Route path="/sell-a-home" render={(routeProps) => (
+              <SellScreen {...routeProps} scrollY={this.state.scrollY} />)} />
+            {/* <Route path="/buy-a-home" component={BuyScreen} />
             <Route path="/contact" component={Contact} /> */}
             <Footer />
           </div>
         </Router>
-        {/* 
-        <Footer>
-          <FooterMenu />
-          <QuickConnect />
-        </Footer> */}
       </div>
     );
   }

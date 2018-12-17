@@ -1,6 +1,6 @@
 import React from 'react';
 import { withResizeDetector } from 'react-resize-detector';
-import Button from '../shared/Button';
+import Button from './Button';
 import './Splash.css';
 class Splash extends React.Component{
   constructor(props){
@@ -32,17 +32,17 @@ class Splash extends React.Component{
   render(){
     return (
       <div ref={this.container} className="splash-container" style={{
+        backgroundImage: `url(assets/${this.props.background})`,
         backgroundSize: this.state.width,
-        backgroundPosition: `${this.state.x}px ${this.state.y - (this.props.scrollY ? 32 : 0)}px`
+        backgroundPosition: `${this.state.x}px ${this.state.y - (this.props.scrollY ? 32 : 0)}px`, 
+        minHeight: this.state.width / 3
       }}>
         <div className="splash-content" style={{opacity: 1 - this.props.scrollY / 200}}>
-          <div className="splash-title" style={{marginTop: this.state.width / 3}}>Rent to Own</div>
-          <div><span className="splash-subtitle">Do these awesome things</span></div>
+          {this.props.title && <div className="splash-title" style={{marginTop: this.state.width / 3}}>{this.props.title}</div>}
+          {this.props.subtitle && <div><span className="splash-subtitle">{this.props.subtitle}</span></div>}
           <div>
-            <Button>Do Stuff</Button>
-            <Button>Do Stuff</Button>        
+            {this.props.buttons && this.props.buttons.map(button => <Button>{button}</Button>)}      
           </div>
-          <hr class="separator" />
         </div>
       </div>
     )

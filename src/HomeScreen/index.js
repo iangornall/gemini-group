@@ -1,11 +1,19 @@
 import React from 'react';
-import Splash from './Splash';
+import Splash from '../shared/Splash';
 import Register from './Register';
-import Info from './Info';
+import Info from '../shared/Info';
 import Hero from './Hero';
+import './index.css';
 let HomeScreen = ({scrollY}) => (
   <div style={{position: "relative"}}>
-    <Splash scrollY={scrollY} />
+    <Splash 
+      scrollY={scrollY} 
+      title="Rent to Own"
+      subtitle="Do these awesome things"
+      buttons={["Do Stuff", "Do Stuff"]}
+      background="banner1.jpg"
+    />
+    <hr class="separator" />
     <Register />
     <Info 
       title="What is Rent to Own?" 

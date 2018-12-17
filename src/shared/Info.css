@@ -5,6 +5,9 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+.info-title {
+  margin-bottom: 0.5em;
+}
 .info-text-container {
   flex-grow: 1;
   flex-basis: 300px;

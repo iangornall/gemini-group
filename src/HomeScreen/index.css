@@ -1,0 +1,8 @@
+.separator {
+  margin: 2em 2em 1em;
+}
+@media (min-width: 768px) {
+  .separator {
+    display: none;
+  }
+}
