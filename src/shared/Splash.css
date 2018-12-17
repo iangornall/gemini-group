@@ -1,20 +1,27 @@
+.splash-wrapper {
+  position: relative;
+}
 .splash-container {
+  position: relative;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-size: auto 300px;
+  overflow: hidden;
   padding: 2em 4em 0;
-  transition: all 200ms;  
   text-align: center;
+}
+.splash-content-wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 10%;
 }
 .splash-title, .splash-subtitle {
   display: inline-block;
   padding: 0.1rem 0.5rem;
-  z-index: -1;
 }
 .splash-title {
-  margin-top: 3em;
   font-size: var(--large);
   margin-bottom: 0.5em;
-  z-index: -1;
 }
 .splash-subtitle {
   font-size: var(--medium);
@@ -35,7 +42,18 @@
 
 @media (min-width: 768px) {
   .splash-container {
+    background-size: cover;
+  }
+  .splash-wrapper {
+    margin-bottom: 0 !important;
+    overflow: hidden !important;
+    height: auto !important;
+  }
+  .splash-container {
     text-align: left;
+  }
+  .splash-content {
+    margin-top: 0 !important;
   }
   .splash-title {
     margin-top: 0.5em !important;
@@ -48,5 +66,10 @@
     background: rgba(0, 0, 0, 0.5);
     color: var(--white);
     text-align: left;
+  }
+}
+@media (max-width: 768px) {
+  .splash-content {
+    opacity: 1 !important;
   }
 }
