@@ -1,7 +1,7 @@
 {
   "main.css": "/gemini-group/static/css/main.7ed73b8b.chunk.css",
-  "main.js": "/gemini-group/static/js/main.ec564bbc.chunk.js",
-  "main.js.map": "/gemini-group/static/js/main.ec564bbc.chunk.js.map",
+  "main.js": "/gemini-group/static/js/main.3e189f14.chunk.js",
+  "main.js.map": "/gemini-group/static/js/main.3e189f14.chunk.js.map",
   "static/css/1.7c3c7aec.chunk.css": "/gemini-group/static/css/1.7c3c7aec.chunk.css",
   "static/js/1.aa87eecc.chunk.js": "/gemini-group/static/js/1.aa87eecc.chunk.js",
   "static/js/1.aa87eecc.chunk.js.map": "/gemini-group/static/js/1.aa87eecc.chunk.js.map",
@@ -10,6 +10,6 @@
   "static/css/1.7c3c7aec.chunk.css.map": "/gemini-group/static/css/1.7c3c7aec.chunk.css.map",
   "static/css/main.7ed73b8b.chunk.css.map": "/gemini-group/static/css/main.7ed73b8b.chunk.css.map",
   "index.html": "/gemini-group/index.html",
-  "precache-manifest.f0475205a3cf6b1e1016ee9497ce8554.js": "/gemini-group/precache-manifest.f0475205a3cf6b1e1016ee9497ce8554.js",
+  "precache-manifest.df19d4255f7e3344c06db9bf0713b88e.js": "/gemini-group/precache-manifest.df19d4255f7e3344c06db9bf0713b88e.js",
   "service-worker.js": "/gemini-group/service-worker.js"
 }

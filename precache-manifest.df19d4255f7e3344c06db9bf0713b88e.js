@@ -4,15 +4,15 @@ self.__precacheManifest = [
     "url": "/gemini-group/static/js/runtime~main.36412c2a.js"
   },
   {
-    "revision": "ec564bbc843266c4517e",
-    "url": "/gemini-group/static/js/main.ec564bbc.chunk.js"
+    "revision": "3e189f14d225630f5e67",
+    "url": "/gemini-group/static/js/main.3e189f14.chunk.js"
   },
   {
     "revision": "aa87eecc71d32b11a2ad",
     "url": "/gemini-group/static/js/1.aa87eecc.chunk.js"
   },
   {
-    "revision": "ec564bbc843266c4517e",
+    "revision": "3e189f14d225630f5e67",
     "url": "/gemini-group/static/css/main.7ed73b8b.chunk.css"
   },
   {
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/gemini-group/static/css/1.7c3c7aec.chunk.css"
   },
   {
-    "revision": "23a80f4a4da5d17ddb02132f5897e7cd",
+    "revision": "9e7efa3f700236e1418793c58d6c47cc",
     "url": "/gemini-group/index.html"
   }
 ];
