@@ -10,12 +10,10 @@ let ContactScreen = ({scrollY}) => (
       background="banner3.jpg"
     />
     <div class="contact-container">
-      <div class="contact-text">If you would like to be on Pre Property Solution’s list to get new property updates before the public knows please fill out your information below</div>
+      <div class="contact-text">If you would like to be on Gemini Group’s list to get new property updates before the public knows please fill out your information below</div>
       <div class="contact-information">
-        <strong>Fax:</strong> (855) 667-7336<br />
-        <strong>Office Location:</strong> 580 Thames St Newport, RI 02840<br />
-        <strong>Mailing address:</strong> PO Box 626 Newport, RI 02840<br />
-        <strong>Email:</strong> contactus@prepropertysolutions.com<br />
+        <strong>Phone:</strong>(800) 607-2942<br />
+        <strong>Email:</strong> info@geminigroupatl.com<br />
       </div>
     </div>
     <div class="two-column">

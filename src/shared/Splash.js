@@ -12,7 +12,7 @@ let Splash = ({title, subtitle, buttons, background, scrollY,}) => (
         {title && <div className="splash-title">{title}</div>}
         {subtitle && <div><span className="splash-subtitle">{subtitle}</span></div>}
         <div className="splash-button-container">
-          {buttons && buttons.map(button => <Button>{button}</Button>)}      
+          {buttons && buttons.map(button => <Button href={button.href}>{button.text}</Button>)}      
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@
   line-height: 1.75em;
 }
 .contact-text, .contact-information {
-  padding: 2em;
+  padding: 2em 2em 0;
 }
 .contact-container>div {
   flex-basis: 300px;

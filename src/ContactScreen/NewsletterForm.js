@@ -9,7 +9,7 @@ let NewsletterForm = () => (
       <h3>Be the first to know about new listings!</h3>
       <hr />
     </div>
-    <form>
+    <form action="https://formspree.io/matney@geminigroupatl.com" method="POST">
       <label>
         <div className="newsletter-form-label">First Name</div>
         <input className="newsletter-form-input" type="text" name="first-name" />

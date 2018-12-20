@@ -9,7 +9,7 @@ let ContactForm = () => (
       <h3>Get in Touch!</h3>
       <hr />
     </div>
-    <form>
+    <form action="https://formspree.io/matney@geminigroupatl.com" method="POST">
       <label>
         <div className="contact-form-label">First Name</div>
         <input className="contact-form-input" type="text" name="first-name" />

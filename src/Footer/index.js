@@ -4,8 +4,8 @@ import QuickConnect from './QuickConnect';
 import FooterBottom from './FooterBottom';
 import './index.css';
 let Footer = () => (
-  <footer class="footer">
-    <div class="footer-columns">
+  <footer className="footer">
+    <div className="footer-columns">
       <FooterMenu />
       <QuickConnect />
     </div>
