@@ -1,7 +1,8 @@
 import React from 'react';
-import Button from '../shared/Button';
+import submitMessage from '../shared/submitMessage';
+import {withRouter} from 'react-router-dom';
 import './NewsletterForm.css'
-let NewsletterForm = () => (
+let NewsletterForm = ({history}) => (
   <div className="newsletter-form">
     <h2 className="newsletter-form-title">Newsletter</h2>
     <div className="newsletter-form-subtitle">
@@ -9,7 +10,7 @@ let NewsletterForm = () => (
       <h3>Be the first to know about new listings!</h3>
       <hr />
     </div>
-    <form action="https://formspree.io/matney@geminigroupatl.com" method="POST">
+    <form onSubmit={submitMessage('https://script.google.com/macros/s/AKfycbyW6Xby5pPUjTmF8SZM_cOHtnaFIntUlRrcCZ1TVov4eTvD3PDZ/exec', history)}>
       <label>
         <div className="newsletter-form-label">First Name</div>
         <input className="newsletter-form-input" type="text" name="first-name" />
@@ -26,8 +27,12 @@ let NewsletterForm = () => (
         <div className="newsletter-form-label">Phone Number</div>
         <input className="newsletter-form-input" type="number" name="phone" />
       </label>
-      <Button>Sign Up</Button>
+      <label>
+        <div className="newsletter-form-label">Address</div>
+        <textarea className="newsletter-form-input" name="address" rows="5" />
+      </label>
+      <input className="submit-button" type="submit" value="Submit" />
     </form>
   </div>
 );
-export default NewsletterForm;
+export default withRouter(NewsletterForm);

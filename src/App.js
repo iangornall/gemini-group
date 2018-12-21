@@ -7,6 +7,7 @@ import SellScreen from './SellScreen';
 import BuyScreen from './BuyScreen';
 import ContactScreen from './ContactScreen';
 import PropertiesScreen from './PropertiesScreen';
+import RecievedScreen from './RecievedScreen';
 import Footer from './Footer';
 
 export default class App extends React.Component {
@@ -42,6 +43,8 @@ export default class App extends React.Component {
               <ContactScreen {...routeProps} scrollY={this.state.scrollY} />)} />
             <Route path="/properties" render={(routeProps) => (
               <PropertiesScreen {...routeProps} scrollY={this.state.scrollY} />)} />
+            <Route path="/recieved" render={(routeProps) => (
+              <RecievedScreen {...routeProps} scrollY={this.state.scrollY} />)} />
             <Footer />
           </div>
         </Router>

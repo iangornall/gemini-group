@@ -1,7 +1,8 @@
 import React from 'react';
-import Button from '../shared/Button';
-import './ContactForm.css'
-let ContactForm = () => (
+import submitMessage from '../shared/submitMessage';
+import './ContactForm.css';
+import {withRouter} from 'react-router-dom';
+let ContactForm = ({history}) => (
   <div className="contact-form">
     <h2 className="contact-form-title">Questions?</h2>
     <div className="contact-form-subtitle">
@@ -9,7 +10,7 @@ let ContactForm = () => (
       <h3>Get in Touch!</h3>
       <hr />
     </div>
-    <form action="https://formspree.io/matney@geminigroupatl.com" method="POST">
+    <form onSubmit={submitMessage('https://script.google.com/macros/s/AKfycbwTIRMnb6BXCjPepHShgEHB7j0mJ_GHiML1-Iz6KR_pCJQ1Nid4/exec', history)}>
       <label>
         <div className="contact-form-label">First Name</div>
         <input className="contact-form-input" type="text" name="first-name" />
@@ -23,15 +24,11 @@ let ContactForm = () => (
         <input className="contact-form-input" type="email" name="email" />
       </label>
       <label>
-        <div className="contact-form-label">Subject</div>
-        <input className="contact-form-input" type="text" name="subject" />
-      </label>
-      <label>
         <div className="contact-form-label">Message</div>
-        <textarea className="contact-form-input" name="subject" rows="5" />
+        <textarea className="contact-form-input" name="message" rows="5" />
       </label>
-      <Button>Submit</Button>
+      <input className="submit-button" type="submit" value="Submit" />
     </form>
   </div>
 );
-export default ContactForm;
+export default withRouter(ContactForm);
