@@ -1,0 +1,33 @@
+.property-card {
+  margin: 0.5rem;
+  background-color: rgb(242, 242, 242);
+}
+.property-card-image {
+  width: 100%;
+}
+.property-card-container {
+  padding: 1rem;
+}
+.property-card-address {
+  margin-bottom: 1rem;
+}
+.property-card-price {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.property-card-details {
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+}
+.property-card-details>div {
+  display: inline-block;
+  margin-right: 1rem;
+}
+.property-card-footer {
+  display: flex;
+  align-items: center;
+}
+.property-card-date {
+  flex: 1;
+}

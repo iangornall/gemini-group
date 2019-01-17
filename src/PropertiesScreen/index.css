@@ -2,3 +2,13 @@
   padding: 2em;
   text-align: center;
 }
+.property-cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.5rem;
+}
+.property-cards>div {
+  flex-basis: 20em;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
