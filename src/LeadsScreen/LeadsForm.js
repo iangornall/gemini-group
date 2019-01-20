@@ -54,9 +54,11 @@ export default class LeadsForm extends React.Component{
       for(let j = 0; j < keys.length; j++){
         if (keys[j] === "Contact Phone"){
           row.rawPhoneNumber = values[j];
-          let phoneNumberArr = values[j].split('');
-          phoneNumberArr = [...phoneNumberArr.slice(0,3), '-', ...phoneNumberArr.slice(3,6), '-', ...phoneNumberArr.slice(6)];
-          values[j] = phoneNumberArr.join('');
+          if (values[j]){
+            let phoneNumberArr = values[j].split('');
+            phoneNumberArr = [...phoneNumberArr.slice(0,3), '-', ...phoneNumberArr.slice(3,6), '-', ...phoneNumberArr.slice(6)];
+            values[j] = phoneNumberArr.join('');
+          }
         }
         row[keys[j]] = values[j];
       }
