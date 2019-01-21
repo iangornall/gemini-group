@@ -181,7 +181,7 @@ export default class LeadsForm extends React.Component{
               this.state.status === "sending" ? 
                 <div>
                   <p>Sending data to Podio...<strong> do not leave this page.</strong></p>
-                  <p><strong>{this.state.numSent} leads</strong> sent out of <strong>{this.state.numLeads} total leads.</strong></p>
+                  <p><strong>{this.state.numSent} leads</strong> sent out of <strong>{this.state.numLeads} total.</strong></p>
                 </div> :
                 <div>
                   <p><strong>{this.state.numSent} leads</strong> sent out of <strong>{this.state.numLeads} total.</strong></p>
