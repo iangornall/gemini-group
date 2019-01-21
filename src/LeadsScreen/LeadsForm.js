@@ -1,10 +1,15 @@
 import React from 'react';
+import './LeadsForm.css';
 export default class LeadsForm extends React.Component{
   constructor(props){
     super(props);
     this.state = {
       file: '',
-      slybroadcast: false
+      slybroadcast: false,
+      status: '',
+      numLeads: 0,
+      numSent: 0,
+      error: ''
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -13,6 +18,7 @@ export default class LeadsForm extends React.Component{
     this.triggerSlybroadcast = this.triggerSlybroadcast.bind(this);
     this.fileInput = React.createRef();
   }
+
   sendToPodio(json){
     return fetch('https://secure.globiflow.com/catch/5618hd399hkt2d8', 
     {
@@ -65,9 +71,15 @@ export default class LeadsForm extends React.Component{
       row.slybroadcast = this.state.slybroadcast;
       jsonData.push(row);
     }
+    this.setState({
+      numLeads: jsonData.length
+    })
     return jsonData;
   }
   createSlybroadcast(){
+    this.setState({
+      status: "sending"
+    });
     if (this.state.slybroadcast){
       return fetch('https://secure.globiflow.com/catch/5s2h3vaq3g1k6j4',
       {
@@ -84,6 +96,9 @@ export default class LeadsForm extends React.Component{
     }
   }
   triggerSlybroadcast(){
+    this.setState({
+      status: "complete"
+    })
     if (this.state.slybroadcast){
       return fetch('https://secure.globiflow.com/catch/ol4z6fs122y85cz',
       {
@@ -112,6 +127,15 @@ export default class LeadsForm extends React.Component{
           for (let row of jsonData){
             let response = (await this.sendToPodio(JSON.stringify(row)));
             console.log("sent item", response);
+            if (response.status === 200){
+              this.setState((prevState) => ({
+                numSent: prevState.numSent + 1
+              }));
+            } else {
+              this.setState((prevState) => ({
+                error: response.statusText
+              }));
+            }
           }
           // test
           // let response = await this.sendToPodio(JSON.stringify(jsonData[1]));
@@ -134,13 +158,38 @@ export default class LeadsForm extends React.Component{
   }
   render(){
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input type="file" name="data" ref={this.fileInput} />
-        <div>Send Slybroadcast</div>
-        <input type="radio" name="slybroadcast" value="true" checked={this.state.slybroadcast} onChange={this.handleInputChange} />yes
-        <input type="radio" name="slybroadcast" value="false" checked={!this.state.slybroadcast} onChange={this.handleInputChange} />no
-        <input type="submit" />
-      </form>
+      <div className="leads-form">
+        <h2 className="leads-form-title">Import from my<em>+plus</em> leads</h2>
+        <div className="leads-form-subtitle">
+          <hr />
+          <h3>Send to Podio</h3>
+          <hr />
+        </div>
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            <div className="leads-form-label">Spreadsheet from my<em>+plus</em> leads</div>
+            <input className="leads-form-input" type="file" name="data" ref={this.fileInput} />
+          </label>
+          <label>
+            <div className="leads-form-label">Send Slybroadcast</div>
+            <input type="radio" name="slybroadcast" value="true" checked={this.state.slybroadcast} onChange={this.handleInputChange} />yes
+            <input type="radio" name="slybroadcast" value="false" checked={!this.state.slybroadcast} onChange={this.handleInputChange} />no
+          </label>
+          <input className="submit-button" type="submit" value="Submit" />
+        </form>
+            {this.state.status && (
+              this.state.status === "sending" ? 
+                <div>
+                  <p>Sending data to Podio...<strong> do not leave this page.</strong></p>
+                  <p><strong>{this.state.numSent} leads</strong> sent out of <strong>{this.state.numLeads} total leads.</strong></p>
+                </div> :
+                <div>
+                  <p><strong>{this.state.numSent} leads</strong> sent out of <strong>{this.state.numLeads} total.</strong></p>
+                  <p><strong>Completed.</strong> All data sent to Podio!</p>
+                </div>
+            )}
+            {this.state.error && <div className="leads-form-error"><em>{this.state.error}</em></div>}
+      </div>
     )
   }
 }
