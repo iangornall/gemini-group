@@ -19,7 +19,7 @@ let PropertiesScreen = ({scrollY}) => {
     <div className="properties-content">
       <h2>“All Sold Out!”</h2>
       <h3>Come back soon for new properties!</h3>
-      {data.map(data => (
+      {/* {data.map(data => (
         <div>{data.address}</div>
       ))}
       <div></div>
@@ -52,7 +52,7 @@ let PropertiesScreen = ({scrollY}) => {
         size="2900"
         date="2 weeks ago"
       />
-    </div>
+    </div> */}
     
   </div>
 )};
