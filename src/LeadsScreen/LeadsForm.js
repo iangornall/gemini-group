@@ -14,7 +14,6 @@ export default class LeadsForm extends React.Component{
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
     this.sendToPodio = this.sendToPodio.bind(this);
-    this.createSlybroadcast = this.createSlybroadcast.bind(this);
     this.triggerSlybroadcast = this.triggerSlybroadcast.bind(this);
     this.fileInput = React.createRef();
   }
@@ -76,25 +75,6 @@ export default class LeadsForm extends React.Component{
     })
     return jsonData;
   }
-  createSlybroadcast(){
-    this.setState({
-      status: "sending"
-    });
-    if (this.state.slybroadcast){
-      return fetch('https://secure.globiflow.com/catch/5s2h3vaq3g1k6j4',
-      {
-        method: "POST",
-        mode: "cors",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        referrer: "no-referrer",
-        body: `{"createSlybroadcast": "true"}`
-      });
-    } else {
-      return new Promise ((resolve) => resolve("No Slybroadcast"));
-    }
-  }
   triggerSlybroadcast(){
     this.setState({
       status: "complete"
@@ -120,32 +100,24 @@ export default class LeadsForm extends React.Component{
     let fr = new FileReader();
     fr.onload = (e) => {
       let jsonData = this.CSVtoJSON(e.target.result);
-      this.createSlybroadcast()
-      .then((result) => {
-        console.log("created slybroadcast", result);
-        (async () => {
-          for (let row of jsonData){
-            let response = (await this.sendToPodio(JSON.stringify(row)));
-            console.log("sent item", response);
-            if (response.status === 200){
-              this.setState((prevState) => ({
-                numSent: prevState.numSent + 1
-              }));
-            } else {
-              this.setState((prevState) => ({
-                error: response.statusText
-              }));
-            }
+      (async () => {
+        for (let row of jsonData){
+          let response = (await this.sendToPodio(JSON.stringify(row)));
+          console.log("sent item", response);
+          if (response.status === 200){
+            this.setState((prevState) => ({
+              numSent: prevState.numSent + 1
+            }));
+          } else {
+            this.setState((prevState) => ({
+              error: response.statusText
+            }));
           }
-          // test
-          // let response = await this.sendToPodio(JSON.stringify(jsonData[1]));
-          // console.log("sent item", response);
-          // end test
-          let response2 = await this.triggerSlybroadcast()
-          console.log("triggered slybroadcast", response2);
-          console.log('all done');
-        })()
-      })
+        }
+        let response2 = await this.triggerSlybroadcast()
+        console.log("triggered slybroadcast", response2);
+        console.log('all done');
+      })();
     };
     fr.readAsText(this.fileInput.current.files[0]);
   }

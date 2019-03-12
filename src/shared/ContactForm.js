@@ -10,7 +10,7 @@ let ContactForm = ({history}) => (
       <h3>Get in Touch!</h3>
       <hr />
     </div>
-    <form onSubmit={submitMessage('https://script.google.com/macros/s/AKfycbwTIRMnb6BXCjPepHShgEHB7j0mJ_GHiML1-Iz6KR_pCJQ1Nid4/exec', history)}>
+    <form onSubmit={submitMessage('https://secure.globiflow.com/catch/646l9rnwve539b9', history)}>
       <label>
         <div className="contact-form-label">First Name</div>
         <input className="contact-form-input" type="text" name="first-name" />
@@ -27,6 +27,7 @@ let ContactForm = ({history}) => (
         <div className="contact-form-label">Message</div>
         <textarea className="contact-form-input" name="message" rows="5" />
       </label>
+      <input type="hidden" name="form" value="contact" />
       <input className="submit-button" type="submit" value="Submit" />
     </form>
   </div>
