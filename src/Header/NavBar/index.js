@@ -7,6 +7,7 @@ let NavBar = ({scrollY}) => (
     <NavLink className="nav-link" activeClassName="active-nav-link" to="/buy-a-home">Buy a Home</NavLink>
     <NavLink className="nav-link" activeClassName="active-nav-link" to="/sell-a-home">Sell a Home</NavLink>
     <NavLink className="nav-link" activeClassName="active-nav-link" to="/properties">Our Properties</NavLink>
+    <NavLink className="nav-link" activeClassName="active-nav-link" to="/faq">FAQ</NavLink>
   </nav>
 );
 export default NavBar;

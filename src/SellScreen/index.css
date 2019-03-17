@@ -2,16 +2,35 @@
   width: 100%;
 }
 .sell-top {
-  margin-top: 2em;
+  margin-top: 1em;
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
 }
+.sell-top p {
+  font-size: 1.5em;
+}
 .sell-top>div:first-child {
-  flex-basis: 400px;
+  flex-basis: 50%;
   flex-grow: 1;
 }
 .sell-top>div:last-child {
-  flex-basis: 300px;
+  flex-basis: 50%;
   flex-grow: 1;
+}
+th {
+  font-size: 1.25em;
+  padding-bottom: 0.5em;
+}
+td {
+  padding: 0 1em 0.25em;
+}
+.table-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.table-container>table {
+  padding-top: 1em;
+  flex-basis: 50%;
+  min-width: 350px;
 }

@@ -19,19 +19,8 @@
 .buy-text {
   padding: 0 2em;
 }
-.step-container {
-  display: flex;
-  align-items: top;
-}
-.step-number {
-  white-space: nowrap;
-}
-.step-cell {
-  flex-basis: 50%
-}
-.step-cell-x2 {
-  flex-basis: 67%;
-}
-.step-number, .step-cell, .step-cell-x2 {
-  padding: 1em;
+
+details {
+  margin: 0.5em;
+  cursor: pointer;
 }

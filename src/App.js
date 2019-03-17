@@ -8,6 +8,7 @@ import SellScreen from './SellScreen';
 import BuyScreen from './BuyScreen';
 import ContactScreen from './ContactScreen';
 import PropertiesScreen from './PropertiesScreen';
+import FAQScreen from './FAQScreen';
 import RecievedScreen from './RecievedScreen';
 import LeadsScreen from './LeadsScreen';
 import Footer from './Footer';
@@ -30,6 +31,8 @@ let App = () => {
             <ContactScreen {...routeProps} scrollY={scrollY} />)} />
           <Route path="/properties" render={(routeProps) => (
             <PropertiesScreen {...routeProps} scrollY={scrollY} />)} />
+          <Route path="/faq" render={(routeProps) => (
+            <FAQScreen {...routeProps} scrollY={scrollY} />)} />
           <Route path="/recieved" render={(routeProps) => (
             <RecievedScreen {...routeProps} scrollY={scrollY} />)} />
           <Route path="/leads" render={(routeProps) => (

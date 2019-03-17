@@ -1,8 +1,7 @@
 import React from 'react';
 import Splash from '../shared/Splash';
 import Register from './Register';
-import Info from '../shared/Info';
-import Hero from '../shared/Hero';
+import Container from '../shared/Container';
 import './index.css';
 let HomeScreen = ({scrollY}) => (
   <div style={{position: "relative"}}>
@@ -19,41 +18,36 @@ let HomeScreen = ({scrollY}) => (
     />
     <hr className="separator" />
     <Register />
-    <Info 
-      title="Rent To Own Homes &amp; Investors" 
-      subtitle="Buying a Home or Selling Your House Has Never Been This Easy!" 
-      text="Owning a home is truly the American Dream. Buying a home can be a difficult process, especially for those with poor credit, no credit and/or a limited amount to invest. A Lease to Own, also known as Rent to Own, Option may be just for you! Based on your individual criteria, we can be very creative with financing and fit it to your needs. We are not loan brokers, bankers, real estate agents or selling homes for someone else, we are the owners or we have a legal equitable interest in the property."
-      button={{href: "/properties", text: "View Our Properties"}}
-      video="assets/how-rent-to-own-works.mp4"
-      poster="assets/how-rent-to-own-works.png"
-      reverse={false}
-    />
-    <Hero 
-      title="Rent To Own Real Estate Specialists"
-      text="We are not real estate agents, bankers or loan brokers
-      who get paid to find you a loan. We are the owner of some lovely homes that are available
-      for purchase in various ways including lease to own."
-      button={{href: "/buy-a-home", text: "Lease to own programs"}}
-      color="rgba(0,111,178,0.7)"
-      background="banner2.jpg"
-    />
-    <Info 
-      title="Lease To Own Homes Specialists"
-      text="We are not Realtors who are selling someone else’s homes, bankers or loan brokers who get paid to find you a loan. We are actually the owner of some lovely homes that are available for purchase in various ways including lease to own. Since we own the homes, many times (depending on your circumstances) we are willing to finance all or part of the purchase ourselves or lease to own them to you. All the normal rules concerning credit, debt ratio and proof of income are thrown out the window. Since we own the homes, we can be very creative with the financing and structure it to fit your needs."
-      video="assets/what-if-i-dont-have-a-mortgage.mp4"
-      poster="assets/what-if-i-dont-have-a-mortgage.png"
-      reverse={true}
-    />
-    <Hero 
-      title="NO CREDIT Or BAD CREDIT?"
-      text="If you are truly interested in owning a home of your own, you can be in a home in less than 30 days with our lease to own program.
-
-      Or, if you don’t see a home you like in our current inventory, let us know and we will place your name on our VIP list for a home that meets your needs. We are located in the Atlanta, GA Metro area and invest in Rent to Own Properties throughout the United States."
-      textColor="#000"
-      button={{href: "/buy-a-home", text: "Learn More"}}
-      color="rgba(255,255,255,0.9)"
-      background="banner3.jpg"
-    />
+    <Container>
+      <h2>Welcome to Gemini Group ATL!</h2>
+      <p>If you are on this website, it is because you are either trying to sell or buy a home.</p> 
+      <p><em>While we are happy to pay cash for homes with a quick close, that is normally with a steep discount and we find MOST of the sellers we buy from would prefer to get FULL MARKET PRICE for their home without taking a discount."</em></p>
+      <h3>So- why are YOU here???</h3>
+      <h4>Because you’re trying to sell?</h4>
+      <p>Are you sick of disappointing calls from your realtor with much-too-low offers or putting your life on hold for yet another unannounced home tour and/or unproductive Open House?</p>
+      <h4>Or are you trying to buy a home?</h4>
+      <p>Are you are discouraged by the struggle to qualify for a mortgage loan (even if you know you can afford the monthly payments), feel stuck renting in a place where you must follow the whims of your landlord, or wonder if you’ll ever have a place that you and your family can truly call your own?</p>
+      <h3>If you fall into either camp, read on... there is HOPE!</h3>
+      <p>Buying and selling homes on terms (ie Lease Purchase or Owner Financing) has been around for decades. In 2018 the Gemini Group ATL’s founder became part of a national group of investors who focus on providing solutions that help home sellers <strong>and</strong> home buyers at the same time.</p>
+      <p>Thus, Gemini Group ATL was created to serve the needs of both parties in the Atlanta metropolitan area and surrounding markets.</p>
+      <p><strong>With our 3-step Lease Purchase Program for sellers and Lease to Own Program for buyers, we help sellers sell their homes and buyers get into a home with a simple and effective solution that helps both sides at once.</strong></p>
+      <p>So whether you’re a seller who needs to get your home sold and can’t keep lowering your price, or you’re a buyer who has been turned down for a mortgage loan but still wants to get into your dream home, Gemini Group ATL can help!</p>
+      <h3>NOPE! WE ARE NOT REALTORS!</h3>
+      <p>We are real estate investors who buy and sell homes throughout the Atlanta metropolitan area. What this means is that we contract to acquire homes each month from home sellers who are struggling either to sell their homes or have become disenchanted with the traditional process, and then we install a prequalified lease-to-own buyer in them who we work with directly to qualify for their mortgage loan.</p>
+      <h3>So...... If you are a home seller who works with us on terms...</h3>
+      <p>...you won’t have to pay realtor fees or commission.</p>
+      <p>...you will sell at full market value and lock your price in today.</p>
+      <p>...you will be able to move on with your life plans, knowing you won’t be writing any more checks to take care of the property, instead you will just wait a short time to RECEIVE a BIG check to get you cashed out at FULL VALUE!</p>
+      <h3>And... if you are a home buyer who works with us...</h3>
+      <p>...you can still move into your dream home, even if you can’t qualify for a loan today!</p>
+      <p>...you will lock in your price today for a purchase in 12-36 months.</p>
+      <p>...you will receive direct guidance and credit consulting to ensure you accomplish your goal of homeownership!</p>
+      <br />
+      <h2>Our Story</h2>
+      <p>Gemini Group ATL was founded by Matney Gornall, a banker with 15+ years and over $1 Billion of deal transaction volume doing creative financing transactions, when he saw the opportunity to bring that creativity to the lives of disillusioned home buyers and sellers.</p>
+      <p>Matney has real estate in his blood, with a grandfather who was a realtor in the Florida market for many years after retiring as a Colonel in the US Air Force and a father who has bought and sold 1000s of acres of land in the north Georgia market.</p>
+      <p>We cover the larger Atlanta Metropolitan and surrounding area and collectively as part of the National Property Team have completed 450+ of these transactions around the country</p>
+    </Container>
   </div>
 );
 export default HomeScreen;

@@ -2,7 +2,7 @@ import React from 'react';
 import submitMessage from '../shared/submitMessage';
 import './ContactForm.css';
 import {withRouter} from 'react-router-dom';
-let ContactForm = ({history}) => (
+let ContactForm = ({history, contactType}) => (
   <div className="contact-form">
     <h2 className="contact-form-title">Questions?</h2>
     <div className="contact-form-subtitle">
@@ -10,7 +10,7 @@ let ContactForm = ({history}) => (
       <h3>Get in Touch!</h3>
       <hr />
     </div>
-    <form onSubmit={submitMessage('https://secure.globiflow.com/catch/646l9rnwve539b9', history)}>
+    <form onSubmit={submitMessage(contactType === 'seller' ? 'https://secure.globiflow.com/catch/33b39wd4m57c5h5' : 'https://secure.globiflow.com/catch/646l9rnwve539b9', history)}>
       <label>
         <div className="contact-form-label">First Name</div>
         <input className="contact-form-input" type="text" name="first-name" />

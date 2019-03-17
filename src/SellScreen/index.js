@@ -1,112 +1,125 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Splash from '../shared/Splash';
-import Info from '../shared/Info';
+import Container from '../shared/Container';
 import ContactForm from '../shared/ContactForm';
 import './index.css';
-let SellScreen = ({scrollY}) => (
-  <div class="sell">
+let SellScreen = ({scrollY}) => {
+  const [listPrice, setListPrice] = useState("");
+  let handlePriceChange = (event) => setListPrice(event.target.value);
+  const [payoff, setPayoff] = useState("");
+  let handlePayoffChange = (event) => setPayoff(event.target.value);
+  let formatNumber = (num) => parseFloat((num * 1).toFixed(2)).toLocaleString();
+  return (
+  <div className="sell">
     <Splash 
       scrollY={scrollY} 
       background="banner4.jpg"
     />
-    <div class="sell-top">
-      <Info
-        bigtitle={true}
-        title="Sell Your House"
-        text={["We buy properties in any condition or situation. We are not real estate agents, so we don’t want to list your house. We want to buy it.  We can advise you on the best approach to sell your home quickly within your unique situation. We buy houses in any condition, regardless why they are for sale.",
-        "We are active property buyers. If your property meets our needs, we would like to buy it soon. We are not afraid of properties that require repairs. Regardless of the condition of your house or your current situation, we would like to learn more about your property.",
-        "We are also well networked with other active buyers. This means we can help with properties that don’t match our current needs. There is no risk and no obligation on your part so please tell us about your property."]}
-      />
-      <ContactForm />
+    <div className="sell-top">
+      <Container padding="1em 3% 1em 6%">
+        <p>If your house has been on the market for months with hardly a nibble...</p>
+        <p>If you’ve turned to realtors because “that’s just the way you sell a house...”</p>
+        <p>If you’re sick of footing the bill for your “Old Home” instead of your “New Home”...</p>
+        <p>Or if you’d really love to turn away all those people dropping in to tour your home unannounced who haven’t been pre-qualified as likely buyers...</p>
+        <p>Then the Gemini Group ATLs Lease Purchase Program may be just the solution for you!</p>
+      </Container>
+      <ContactForm contactType="seller" />
     </div>
-    <div class="sell-bottom">
-    <Info
-      title="Behind On Payments?"
-      text={["Act now while there’s still time!",
-      "Sometimes life throws you a curve ball and the best of plans come unraveled. A payment that was completely manageable when you got your mortgage can seem impossible after a job change, injury, divorce or many other life altering events.", "If you’ve fallen behind on your payments it is important that you act immediately. Let us help solve your problem while we still can."]}
-    />
-    <Info
-      title="Sell Your House"
-      text={["Rising interest rates mean ever-increasing mortgage payments!",
-      "Millions of homeowners have adjustable rate or interest only mortgages. Rising interest rates may have caused your monthly mortgage payment to skyrocket. In fact, many homeowners wouldn’t even qualify for the loan payment they are now expected to make. You are not alone, and it is not your fault. The economy is not very predictable, and rising interest rates have caught many people off guard.",
-      "If you can’t keep pace with your ever-increasing monthly payment then contact us immediately. We can act quickly and may be able to solve your problem before your next payment is due."]}
-    />
-    <Info
-      title="No Equity Or Over Financed?"
-      text={["Get out of your house without paying real estate commissions!",
-      "Getting out of a home when you have little or no equity can be tough. In fact, just selling for what you owe may take several months, and if you list with a real estate agent the commission may have to come out of your pocket.",
-      "Contact us before listing with a real estate agent where you are locked in to paying a commission. We may be able to buy your property directly, saving you time and avoiding commission expenses."]}
-    />
-    <Info
-      title="Two House Payments?"
-      text={["Don’t let the stress of selling your old house keep you from enjoying your new one!",
-      "Timing in real estate can be tricky. Maybe your old house didn’t sell as quickly as expected or your buyer fell through. Are you now stuck making payments on two houses? Instead of enjoying your new home you may feel stressed as you worry about how much more money you will throw away waiting to sell your old house.",
-      "Wouldn’t it be great if we could buy your old house so you can start enjoying your new home?"]}
-    />
-    <Info
-      title="Relocating Or New Job?"
-      text={["You have a lot going on, let us take one of your worries away!",
-      "Moving for a new job or a job transfer is often very exciting. However, it is also busy and stressful. Your deadline to leave town may be out of your control, and as it approaches (or passes) the pressure to sell your house will increase.",
-      "Give us a chance to relieve you of this burden during this busy time in your life."]}
-    />
-    <Info
-      title="Expired Listing?"
-      text={["Don’t even consider re-listing before you contact us!",
-      "Are you frustrated because your house listed with a Realtor hasn’t sold? Do you know why it didn’t sell? Was it the price, the marketing, not enough open houses, poor offers, or one of many other variables?",
-      "Before re-listing with another Realtor, please contact us. We are active buyers and can act quickly. Let us help you get out of your house so you can stop making those mortgage payments."]}
-    />
-    <Info
-      title="Suddenly Downsized?"
-      text={["Losing a job changes everything!",
-      "In today’s world of mergers and outsourcing, a job that was once safe and secure could disappear without notice. To make matters worse, many companies have hiring freezes meaning it may be difficult for you to find an equivalent replacement job.",
-      "If you’ve been the victim of corporate downsizing, it may be time to re-evaluate all of your financial commitments."]}
-    />
-    <Info
-      title="Foreclosure Or Bankruptcy?"
-      text={["Time is of the essence. Act fast to save your credit!",
-      "If your house payments are more than a month behind, your lender has probably already started foreclosure proceedings. As time passes, thousands of dollars in penalties and legal fees can be added to the balance you owe. And every single day extra interest is added!",
-      "The best advice we can offer is for you to contact us immediately. Time truly is your enemy, and the longer you wait the harder it is for us to help.",
-      "You don’t have to face this alone. We can help. Using our expertise we aim to save your credit and help you avoid filing bankruptcy. We are caring and understanding people, and we know how tough a time this is for you. Imagine the relief you will feel once we begin working together to put this behind you. Call us today for a confidential, no obligation evaluation of your situation before it is too late!"]}
-    />
-    <Info
-      title="Foreclosure Or Bankruptcy?"
-      text={["We can help you get on with your life!",
-      "Divorce is difficult even in the best of situations. Adding the burden of selling a jointly owned home to the stress and emotions you are feeling may be overwhelming. As real estate investors who buy houses fast we can help. Let us give you an option that can help you get on with your life.",
-      "We will be sensitive to your situation and work with you quickly to find a solution."]}
-    />
-    <Info
-      title="Liens Or Judgments?"
-      text={["Don’t be discouraged!",
-      "Don’t let liens, judgments, or other title problems discourage you. We know how to handle these situations thereby allowing you to sell your property."]}
-    />
-    <Info
-      title="Inherited Or Estate Property?"
-      text={["Real estate is often the least liquid asset in an estate!",
-      "Losing a loved one is a tragic experience. When real estate is involved in the estate, it often must be sold during the probate process. If you are responsible for settling the estate, you will have your hands full simply with the legal requirements, paperwork, and deadlines.",
-      "By offering a possible quick sale of the property, we can help ease the task ahead of you."]}
-    />
-    <Info
-      title="Nightmare Tenants?"
-      text={["Immediate relief available for Tired Landlords!",
-      "Are you tired of tenants, toilets and trash? Being a landlord is often a tiresome and thankless “job”. It isn’t easy, and certainly isn’t fun. Dealing with tenants that don’t pay or damage your property is enough to make you pull out your hair. On top of the headaches is the expense and maintenance.",
-      "If you’ve had enough and would like to “move on”, we can help you put this burden behind you. Tell us about your property and situation. We can help."]}
-    />
-    <Info
-      title="Vacant House?"
-      text={["Contact us to stop the bleeding!",
-      "Are you throwing money away making payments on a vacant house? It doesn’t take long for those payments to add up and really hurt your bottom line. In addition to this financial burden, it can be exhausting trying to keep an empty house secure and maintained. Let us help.",
-      "Also, if there’s a vacant house in your neighborhood bringing down property values please let us know."]}
-    />
-    <Info
-      title="Damaged Or Needing Repairs?"
-      text={["Unlike a typical buyer, we can look beyond the repairs!",
-      "Most buyers are either afraid of properties in need of repair or they simply can’t envision the end result. However, getting your property into selling condition may take more time or money than you have available. Before investing in costly repairs, please contact us. We are experienced in buying properties that need work. Let us save you the time, money, and risk involved."]}
-    />
-    <Info
-      title="I Just Want Top Dollar"
-      text={["We buy many properties that have zero debt on them or little debt/large equity. We buy all different types of homes. If you are simply looking to avoid realtor fees and sometimes even your State closing costs, we can buy your home seamlessly with little or no expense to you."]}
-    />
-    </div>
+    <Container className="sell-bottom">
+      <h2>What IS a Lease Purchase Program?</h2>
+      <p>Since over 80% of potential home buyers can’t qualify for a loan today, it can be very difficult for you and your realtor to find someone who can buy your home directly. A Lease Purchase Program (also called rent-to-own) can make this process easier and faster by pulling from a different and larger pool of potential buyers that are ready to buy, but need a bit more time to qualify for home financing.</p>
+      <p>With our lease purchase program, you lease your home directly to Gemini Group ATL LLC for a predetermined period of time with a pre-negotiated ultimate purchase price, up to 100% of the market value, locking in the equity in your home. We then install a prequalified buyer who works on improving their credit or saving an additional down payment so they can purchase the home before the lease term is up. Once the tenant/buyer moves in, we take over all responsibilities for the home at that point. We take responsibility for the mortgage, insurance, taxes, maintenance, repairs etc.</p>
+      <h2>Are you a Real Estate Agent?</h2>
+      <p>No! We aren’t agents or brokers. We are investors who acquire wonderful homes and place qualified tenant-buyers into them. And since we are home buyers and not realtors or brokers you don’t have to worry about paying any commissions or watching your equity being whittled away by the usual buyer discounts etc.</p>
+      <h2>Show me the $$$$$</h2>
+      <p>This is the best part, in a traditional sale you generally taking discounts off your target price for realtor fees, discounts to list price, seller paid closing costs etc. In our model, you start with your target price, subtract your mortgage balance and transfer tax and that is your check- locked in on the day we sign our Lease Purchase Agreement. Check out the illustration below- and adjust the numbers with yours to see what I mean!</p>
+      <div class="table-container">
+        <table>
+          <tr>
+            <th colSpan="2">Rent to Own with Us</th>
+          </tr>
+          <tr>
+            <td>Your List Price</td>
+            <td><input onChange={handlePriceChange} type="number" value={listPrice} /></td>
+          </tr>
+          <tr>
+            <td>Total Payoff</td>
+            <td><input onChange={handlePayoffChange} type="number" value={payoff} /></td>
+          </tr>
+          <tr>
+            <td>Our Split of Your Equity</td>
+            <td>$0</td>
+          </tr>
+          <tr>
+            <td>Our Commission</td>
+            <td>$0</td>
+          </tr>
+          <tr>
+            <td>Our Closing Costs</td>
+            <td>$0</td>
+          </tr>
+          <tr>
+            <td>Your Equity</td>
+            <td>${formatNumber(listPrice - payoff)}</td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <th colSpan="2">Conventional Deal</th>
+          </tr>
+          <tr>
+            <td>List Price</td>
+            <td>${formatNumber(listPrice)}</td>
+          </tr>
+          <tr>
+            <td>Total Payoff</td>
+            <td>${formatNumber(payoff * 1)}</td>
+          </tr>
+          <tr>
+            <td>Typical Discount (5%)</td>
+            <td>${formatNumber((listPrice * 5) / 100)}</td>
+          </tr>
+          <tr>
+            <td>Real Estate Commision (6%)</td>
+            <td>${formatNumber((listPrice * 6) / 100)}</td>
+          </tr>
+          <tr>
+            <td>Closing Costs and Other Fees (2.5%)</td>
+            <td>${formatNumber((listPrice * 2.5) / 100)}</td>
+          </tr>
+          <tr>
+            <td>Your Equity</td>
+            <td>${formatNumber(((listPrice * 86.5) / 100) - payoff)}</td>
+          </tr>
+        </table>
+      </div>
+      <br />
+      <h2>This sounds too good to be true- “What’s the catch????”</h2>
+      <p>While we don’t really consider this a “catch”- if you <strong>need</strong> all your equity <strong>TODAY</strong>- our program is probably not going to be a perfect fit for you (although there are workarounds we can discuss) and some sellers are unclear why they have to wait. Simply put, the wait equals the length of time it takes for our tenant-buyer to qualify for a mortgage loan (which is usually within 12-24 months).</p>
+      <p>If you <strong>CAN</strong> wait, there are some definite benefits to doing it this way. Since we work with a large pool of rent-to-own buyers, we can fill your house quickly. Once that happens, we take on full responsibility for your home and you can stop paying for your mortgage, repairs, maintenance, taxes, or anything else when we take over.</p>
+      <p>And because we commit to full-market value at the beginning of the lease period, you don’t have to worry about paying commissions like you would with a realtor or watching your anticipated equity disappear through repeated (and frustrating) price reductions while you wait to sell your home. Yes, you may have to wait a little for your money... but you will be making far more from the sale when you arrive at the closing table.</p>
+      <br />
+      <h2>Here is how the Gemini Group ATL’s Lease Purchase Program Works- Step by Step!</h2>
+      <h3>1. House Visit + Lease Purchase Agreement</h3>
+      <p>Our first step is to meet with you and visit your home. If we are confident your house is a good fit for our program, we will negotiate a lease purchase agreement together.</p>
+      <p>The agreement will break down things like your cash out price, length of the rental period, and responsibilities of each party. </p>
+      <p>WHAT THIS MEANS FOR YOU:</p>
+      <p>You can be confident that you will receive your maximum net proceeds - up to 100% of the fair market value of your home - on or before the lease expiration date. In other words, your profit is locked in from Day 1.</p>
+      <h3>2. We find and QUALIFY the perfect tenant buyer to Sub-Lease the home from US</h3>
+      <p>We won’t consider a lease purchase candidate for the home unless we are 99.99% confident they will qualify to purchase at the end of the rental period. We won’t accept any buyers who don’t meet the qualifications of a 3rd party credit consultant agency and mortgage broker.</p>
+      <p>Once we execute a sub-lease purchase agreement with the buyer, they are required to follow our proven home-renter to home owner plan to prepare for their future purchase.</p>
+      <p>WHAT THIS MEANS FOR YOU:</p>
+      <p>You don’t have to lose sleep waiting for the perfect buyer- we find them, qualify them and put them in the home on a direct path to home ownership. <strong>And</strong> most importantly we stay “in-the-middle” to make sure you end up at a closing table with a check in hand at the end of your Lease Purchase with Gemini Group ATL.</p>
+      <h3>3. Tenant-Buyer Moves in for lease period (and <strong>WE</strong> take over full responsibility for everything)</h3>
+      <p>After we finalize the lease purchase agreement with you, and our sub-lease purchase with our pre-qualified buyer, our tenant-buyer moves in and gets to work qualifying for a loan that will let them purchase the house. We work closely with them to get them across the finish line within the lease term.</p>
+      <p>During this lease term, we take on 100% responsibility as the tenant-buyer’s landlord. We will handle your mortgage payments, repairs, maintenance, and anything else that comes up. All you have to do is wait for a closing date and collect your proceeds at settlement.</p>
+      <p>WHAT THIS MEANS FOR YOU:</p>
+      <p>As soon as we have placed a tenant-buyer (which can generally take 30-90 days or less), all responsibility for the house is out of your hands and into ours.</p>
+      <h3>4. Renter becomes a Buyer and you close out on your home</h3>
+      <p>On or before the end of the lease date, our carefully pre-qualified buyer (who has been following our home-renter to homeowner plan) will qualify for their mortgage loan. At that point, they will purchase your home.</p>
+      <p>WHAT THIS MEANS FOR YOU:</p>
+      <p>You receive full market value for your home, and you’ve just helped a family become happy homeowners.</p>
+    </Container>
   </div>
-);
+)};
 export default SellScreen;
