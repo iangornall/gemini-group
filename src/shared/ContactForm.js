@@ -2,7 +2,7 @@ import React from 'react';
 import submitMessage from '../shared/submitMessage';
 import './ContactForm.css';
 import {withRouter} from 'react-router-dom';
-let ContactForm = ({history, contactType}) => (
+let ContactForm = ({history}) => (
   <div className="contact-form">
     <h2 className="contact-form-title">Questions?</h2>
     <div className="contact-form-subtitle">
