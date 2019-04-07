@@ -2,21 +2,7 @@
   width: 100%;
 }
 .sell-top {
-  margin-top: 1em;
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-.sell-top p {
   font-size: 1.5em;
-}
-.sell-top>div:first-child {
-  flex-basis: 50%;
-  flex-grow: 1;
-}
-.sell-top>div:last-child {
-  flex-basis: 50%;
-  flex-grow: 1;
 }
 th {
   font-size: 1.25em;

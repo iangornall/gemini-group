@@ -2,6 +2,7 @@ import React from 'react';
 import useData from '../hooks/useData';
 import Splash from '../shared/Splash';
 import PropertyCard from './PropertyCard';
+import Button from '../shared/Button';
 import './index.css';
 let PropertiesScreen = ({scrollY}) => {
   let getData = async () => {
@@ -17,8 +18,8 @@ let PropertiesScreen = ({scrollY}) => {
       background="banner6.jpg"
     />
     <div className="properties-content">
-      <h2>“All Sold Out!”</h2>
-      <h3>Come back soon for new properties!</h3>
+      <h2>Properties</h2>
+      <Button href="http://nationalpropertyteam.com/properties/">National Property Team</Button>
     </div>
       {/* {data.map(data => (
         <div>{data.address}</div>

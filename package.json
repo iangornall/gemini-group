@@ -2,7 +2,7 @@
   "name": "gemini-group",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://geminigroupatl.com",
+  "homepage": "https://iangornall.github.io/gemini-v2/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.7.0-alpha.2",

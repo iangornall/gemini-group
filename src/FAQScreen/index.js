@@ -9,10 +9,10 @@ let FAQScreen = ({scrollY}) => (
       background="banner5.jpg"
     />
     <Container>
-      <h2>FAQs about the Gemini Group ATL’s Rent-to-Own Program for home buyers</h2>
+      <h2>FAQs about Gemini Group’s Rent-to-Own Program for home buyers</h2>
       <details>
-        <summary>WHAT ARE THE MINIMUM QUALIFICATIONS TO QUALIFY FOR THE GEMINI GROUP ATL’S RENT-TO-OWN PROGRAM?</summary>
-        <p>We require an up-front down payment that will be applied against the purchase price when you do eventually close on the property, so your ability to put some skin in the game is mandatory. Generally, your down payment will be between 3-10% of the purchase price, depending on the home and your personal situation. It will be applied to your purchase price when you go to closing.</p>
+        <summary>WHAT ARE THE MINIMUM QUALIFICATIONS TO QUALIFY FOR GEMINI GROUP’S RENT-TO-OWN PROGRAM?</summary>
+        <p>We require an up-front non-refundable down payment that will be applied against the purchase price when you do eventually close on the property, so your ability to put some skin in the game is mandatory. Generally, your down payment will be between 3-10% of the purchase price, depending on the home and your personal situation. It will be applied to your purchase price when you go to closing.</p>
         <p>Other than that, a commitment to diligently work with us to convert you from a home-renter to a homebuyer by the end of the lease term is the most important qualification.</p>
         <p>A poor FICO score will NOT disqualify you from our program, so don’t hesitate to consult with us.</p>
       </details>
@@ -51,13 +51,13 @@ let FAQScreen = ({scrollY}) => (
         <p>The length of the rental period is based on evaluation from our third-party credit consulting agency and mortgage consultant. But usually, we can bring you to a point where you can qualify to purchase in 12-24 months.</p>
       </details>
       <details>
-        <summary>WHO IS THE GEMINI GROUP ATL’S RENT-TO-OWN PROGRAM FOR?</summary>
+        <summary>WHO IS GEMINI GROUP’S RENT-TO-OWN PROGRAM FOR?</summary>
         <p>This program is for anyone that is part of the 82% of the market who wants to buy a home, but can’t qualify for a mortgage loan today.</p>
         <p>Most importantly of all, this program is for people who are willing to invest the time and energy to get their credit back on track so they can qualify for a loan to become buyers.</p>
         <p>Alternatively, this program is perfect for someone who can qualify for a loan today, but just wants an extra year or two to save for a down payment or get better loan terms, or needs “seasoning” in the eyes of the lender.</p>
       </details>
       <details>
-        <summary>WHO ISN’T THE GEMINI GROUP ATL’S RENT-TO-OWN PROGRAM FOR?</summary>
+        <summary>WHO ISN’T GEMINI GROUP’S RENT-TO-OWN PROGRAM FOR?</summary>
         <p>This program is not for anyone who wants an overnight miracle, or is unwilling to put in the time and effort to fix what’s broken.</p>
       </details>
 

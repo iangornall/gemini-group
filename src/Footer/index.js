@@ -1,13 +1,12 @@
 import React from 'react';
 import FooterMenu from './FooterMenu';
-import QuickConnect from './QuickConnect';
+// import QuickConnect from './QuickConnect';
 import FooterBottom from './FooterBottom';
 import './index.css';
 let Footer = () => (
   <footer className="footer">
     <div className="footer-columns">
       <FooterMenu />
-      <QuickConnect />
     </div>
     <hr />
     <FooterBottom />

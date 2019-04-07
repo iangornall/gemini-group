@@ -6,6 +6,7 @@ let FooterMenu = () => (
     <Link className="footer-link" to="/">Home</Link>
     <Link className="footer-link" to="/buy-a-home">Buy a Home</Link>
     <Link className="footer-link" to="/sell-a-home">Sell a Home</Link>
+    <Link className="footer-link" to="/faq">FAQ</Link>
     <Link className="footer-link" to="/contact">Contact</Link>
   </div>
 );
