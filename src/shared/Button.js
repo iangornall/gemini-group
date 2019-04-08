@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import './Button.css';
 let Button = ({children, text, color, href}) => (
   (!href || href.includes('http')) ?
-  <a className="button" href={href} style={{background: color}}>
+  <a className="button" href={href} style={{background: color}} target="_blank">
       {text}
       {children}
   </a> :
