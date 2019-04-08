@@ -9,8 +9,6 @@ let submitMessage = (url, history) => {
       mode: "no-cors"
     })
     .then((response) => {
-      console.log(response);
-      console.log(history);
       history.push('/recieved');
     });
     }
