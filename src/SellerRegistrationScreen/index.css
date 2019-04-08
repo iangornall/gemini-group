@@ -1,0 +1,47 @@
+.seller-registration{
+  width: 80%;
+  margin: 0 auto;
+}
+.form {
+  padding: 2em;
+}
+.form-title {
+  margin: 0 0 -0.1em;
+  padding: 0;
+  text-align: center;
+  font-weight: normal;
+  font-size: var(--large);
+}
+.form-subtitle {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+.form-subtitle>h3 {
+  margin: 0;
+  padding: 0 1em;
+}
+.form-subtitle>hr {
+  flex-grow: 1;
+  border-color: red;
+}
+.form-label {
+  padding: 0.25em;
+  margin-top: 0.5em;
+}
+.form-input {
+  width: 100%;
+  padding: 1em;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  color: black;
+  border: 1px #DDD solid;
+}
+.form-input:focus {
+  outline: none;
+  border: 1px #444 solid;
+}
+.mt1 {
+  margin-top: 1em;
+}

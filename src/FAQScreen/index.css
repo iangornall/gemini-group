@@ -1,0 +1,26 @@
+.two-column, .three-column {
+  display: flex;
+  flex-wrap: wrap;
+}
+.two-column>div{
+  flex-basis: 400px;
+  flex-grow: 1;
+}
+
+.three-column {
+  padding: 1em;
+}
+
+.three-column>div {
+  flex-basis: 300px;
+  flex-grow: 1;
+}
+
+.buy-text {
+  padding: 0 2em;
+}
+
+details {
+  margin: 0.5em;
+  cursor: pointer;
+}

@@ -5,11 +5,10 @@ let submitMessage = (url, history) => {
     event.currentTarget.reset();
     fetch(url, {
       method: "POST", 
-      body: data
+      body: data,
+      mode: "no-cors"
     })
-    .then(response => response.json())
-    .then(data => {
-      // console.log(data);
+    .then((response) => {
       history.push('/recieved');
     });
     }

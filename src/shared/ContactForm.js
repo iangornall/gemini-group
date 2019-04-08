@@ -10,7 +10,7 @@ let ContactForm = ({history}) => (
       <h3>Get in Touch!</h3>
       <hr />
     </div>
-    <form onSubmit={submitMessage('https://secure.globiflow.com/catch/646l9rnwve539b9', history)}>
+    <form onSubmit={submitMessage(contactType === 'seller' ? 'https://secure.globiflow.com/catch/33b39wd4m57c5h5' : 'https://secure.globiflow.com/catch/646l9rnwve539b9', history)}>
       <label>
         <div className="contact-form-label">First Name</div>
         <input className="contact-form-input" type="text" name="first-name" />
