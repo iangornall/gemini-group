@@ -6,9 +6,12 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0.5rem;
+  justify-content: center;
+  text-align: left;
 }
 .property-cards>div {
   flex-basis: 20em;
   flex-grow: 1;
   flex-shrink: 0;
+  max-width: 50%;
 }

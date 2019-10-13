@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../shared/Button';
 import './PropertyCard.css';
-let PropertyCard = ({image, address, price, bedrooms, bathrooms, size, date}) => (
+let PropertyCard = ({image, address, price, bedrooms, bathrooms, size, date, link}) => (
   <div className="property-card">
     <img className="property-card-image" src={image} />
     <div className="property-card-container">
@@ -14,8 +14,7 @@ let PropertyCard = ({image, address, price, bedrooms, bathrooms, size, date}) =>
       </div>
       <div className="property-card-footer">
         <div className="property-card-date">{date}</div>
-        <Button>Compare</Button>
-        <Button>Details</Button>
+        <Button href={link}>Details</Button>
       </div>
     </div>
   </div>

@@ -1,17 +1,10 @@
 import React from 'react';
-import useData from '../hooks/useData';
+import moment from 'moment';
 import Splash from '../shared/Splash';
 import PropertyCard from './PropertyCard';
 import Button from '../shared/Button';
 import './index.css';
-let PropertiesScreen = ({scrollY}) => {
-  let getData = async () => {
-    let response = await fetch("http://www.globiflow.com/podiofeed.php?c=11993&a=227194&f=3114");
-    let data = await response.json();
-    return data;
-  }
-  let data = useData(getData);
-  return (
+let PropertiesScreen = ({scrollY}) => (
   <div>
     <Splash 
       scrollY={scrollY} 
@@ -19,43 +12,20 @@ let PropertiesScreen = ({scrollY}) => {
     />
     <div className="properties-content">
       <h2>Properties</h2>
+      <div className="property-cards">
+      <PropertyCard 
+        image="./assets/39SpanishOakWay.webp"
+        address="39 Spanish Oak Way, Dallas, GA 30132, USA"
+        price="$2,295/month"
+        bedrooms="4"
+        bathrooms="3.5"
+        size="3,354 square feet"
+        date={moment("20190815", "YYYYMMDD").fromNow()}
+        link="https://www.zillow.com/homes/39-Spanish-Oak-Way-Dallas,-GA,-30132_rb/"
+      />
+    </div>
       <Button href="http://nationalpropertyteam.com/properties/">National Property Team</Button>
     </div>
-      {/* {data.map(data => (
-        <div>{data.address}</div>
-      ))}
-      <div></div>
-    </div>
-    <div className="property-cards">
-      <PropertyCard 
-        image="./assets/banner1.jpg"
-        address="6104 N Spruce Ave, Kansas City, MO 64119, USA"
-        price="$7250"
-        bedrooms="4"
-        bathrooms="3"
-        size="2900"
-        date="2 weeks ago"
-      />
-      <PropertyCard 
-        image="./assets/banner1.jpg"
-        address="6104 N Spruce Ave, Kansas City, MO 64119, USA"
-        price="$7250"
-        bedrooms="4"
-        bathrooms="3"
-        size="2900"
-        date="2 weeks ago"
-      />
-      <PropertyCard 
-        image="./assets/banner1.jpg"
-        address="6104 N Spruce Ave, Kansas City, MO 64119, USA"
-        price="$7250"
-        bedrooms="4"
-        bathrooms="3"
-        size="2900"
-        date="2 weeks ago"
-      />
-    </div> */}
-    
   </div>
-)};
+)
 export default PropertiesScreen;
