@@ -21,7 +21,6 @@ let PropertiesScreen = ({scrollY}) => (
         bathrooms="3.5"
         size="3,354 square feet"
         date={moment("20190815", "YYYYMMDD").fromNow()}
-        link="https://www.zillow.com/homes/39-Spanish-Oak-Way-Dallas,-GA,-30132_rb/"
       />
     </div>
       <Button href="http://nationalpropertyteam.com/properties/">National Property Team</Button>

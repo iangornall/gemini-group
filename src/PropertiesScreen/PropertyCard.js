@@ -14,7 +14,7 @@ let PropertyCard = ({image, address, price, bedrooms, bathrooms, size, date, lin
       </div>
       <div className="property-card-footer">
         <div className="property-card-date">{date}</div>
-        <Button href={link}>Details</Button>
+        {link && <Button href={link}>Details</Button>}
       </div>
     </div>
   </div>
