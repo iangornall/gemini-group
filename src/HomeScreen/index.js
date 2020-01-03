@@ -11,11 +11,11 @@ let HomeScreen = ({scrollY}) => (
       scrollY={scrollY} 
       title="Rent to Own Homes &amp; Investors"
       subtitle="Buying or Selling Your House Has Never Been This Easy!"
-      buttons={[
-        {text: "Our Properties",
-        href: '/properties'}, 
-        {text: "Lease to Own",
-        href: '/buy-a-home'}]}
+      // buttons={[
+      //   {text: "Our Properties",
+      //   href: '/properties'}, 
+      //   {text: "Lease to Own",
+      //   href: '/buy-a-home'}]}
       background="banner1.jpg"
     />
     <hr className="separator" />
